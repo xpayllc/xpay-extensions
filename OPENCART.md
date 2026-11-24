@@ -1,12 +1,7 @@
-# OpenCart installation and release notes
-
-Published by **X PAY LAB LIMITED**. Packaged version instructions follow.
-
-```text
-XPay x402 USDC Payments for OpenCart — 1.0.1
+# XPay x402 USDC Payments for OpenCart — 1.0.1
 Publisher: X PAY LAB LIMITED | https://x-pay.llc/ | chris@x-pay.llc
 
-TARGET
+## Target
 OpenCart 4.1.0.4, PHP 8.1+ (64-bit), MySQL/MariaDB, cURL, OpenSSL.
 Requires an HTTPS storefront, USD store base and checkout currency, JavaScript,
 a compatible injected EVM browser wallet, and an XPay merchant account/API key.
@@ -14,7 +9,7 @@ Base mainnet USDC only. No recurring payments. Other currencies, chains, OpenCar
 3 and Cloud Marketplace compatibility are not supported by this release.
 The project token $XPAY is not needed for checkout.
 
-INSTALL
+## Install
 1. Back up the store. Test on staging before enabling live payments.
 2. In Extensions > Installer upload xpay.ocmod.zip, then click Install.
 3. In Extensions > Extensions choose Payments, install XPay, then Edit.
@@ -30,7 +25,7 @@ INSTALL
    Disable simulation only after staging review and a merchant-controlled live
    test. This release has no hosted testnet facility.
 
-HOW IT WORKS
+## How It Works
 OpenCart creates its normal unconfirmed order at checkout. XPay binds the final
 USD total (1 USD checkout unit to 1 USDC) to a short-lived Base USDC authorization.
 The shopper reviews and signs in their own wallet. The server validates the
@@ -41,7 +36,7 @@ nonce. Only verified live settlement can advance the order to the selected
 status. Stablecoin value can vary against USD; no exchange-rate conversion or
 separate plugin-added fee is performed.
 
-FEES AND EXTERNAL SERVICES
+## Fees And External Services
 The module download is free. Live processing requires an XPay merchant account;
 processing/service fees are governed by the merchant's XPay agreement. Confirm
 those terms before use. The module does not itself add or deduct a separate
@@ -54,7 +49,7 @@ server-side settings storage and are masked in the admin UI. Protect database
 backups and restrict admin access. Payment snapshots/authorizations are encrypted
 with authenticated encryption using the store encryption key; keep it backed up.
 
-RECONCILIATION
+## Reconciliation
 Once a signature is submitted, do not pay again. Click Recheck payment. The same
 nonce and idempotency key are reused. If the provider's settlement response is
 lost, rechecking depends on its idempotency support. Contact the merchant/XPay
@@ -67,7 +62,7 @@ Do not manually mark unpaid orders paid just because a signature exists.
 Refunds must be arranged by the merchant; automatic wallet refunds are not
 implemented. Simulation leaves orders unconfirmed; it is not a payment.
 
-SECURITY / LIMITS
+## Security / Limits
 Only store administrators can change payment settings. Endpoints are HTTPS,
 publicly resolved and bounded; redirects/private addresses are rejected.
 Use a reliable Base RPC and a least-privilege XPay merchant key. Never put a
@@ -78,14 +73,14 @@ Custom checkout/total/stock extensions and multi-currency configurations require
 separate compatibility review. See validation report for checks actually run;
 no real funds were moved during automated tests.
 
-SUPPORT
+## Support
 chris@x-pay.llc | https://x-pay.llc/ | https://github.com/xpayllc
 Report security issues privately. Never send private keys or full database dumps.
 
-1.0.1 CHANGES
+## 1.0.1 Changes
 Branded responsive payment panel, clear USDC total and receiving wallet; pending
 orders remain protected across page reloads. Service errors display a safe code
 and support reference while detailed responses remain encrypted on the server.
 Transaction hashes in failure responses are retained for receipt review.
 
-```
+[Back to downloads](README.md).

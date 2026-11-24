@@ -1,4 +1,4 @@
-<p align="center"><img src="xpay-logo.png" alt="XPay" width="160"></p>
+<p align="center"><img src="xpay-banner.png" alt="XPay — official USDC payment extensions for WooCommerce, OpenCart and Bagisto" width="100%"></p>
 
 # XPay extensions
 

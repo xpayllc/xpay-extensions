@@ -1,7 +1,3 @@
-# Bagisto installation and release notes
-
-Published by **X PAY LAB LIMITED**. Packaged version instructions follow.
-
 # XPay USDC payments for Bagisto
 
 Version 0.3.1. Minimum Bagisto version: **2.5.1**. PHP **8.4+**, Laravel **13**, HTTPS and a shared Laravel atomic-lock cache are required. Tested with MySQL, MariaDB and PostgreSQL. Base mainnet is supported. BNB Chain is displayed as **Coming soon** and cannot be selected or called in this release.
@@ -102,3 +98,6 @@ Facilitator: https://facilitator-xpay.llc/
 Dashboard: https://www.app-xpay.com/
 Documentation: https://www.api-xpay.com/api/docs/
 Twitter/X: https://x.com/xpayllc
+
+
+Published by **X PAY LAB LIMITED**. [Back to downloads](README.md).
